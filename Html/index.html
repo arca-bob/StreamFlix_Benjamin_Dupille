@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StreamFlix</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <script defer src="../Javascript/index.js"></script>
+
+    <meta property="og:title" content="aa" />
+  </head>
+
+  <body>
+      <!-- div pour détecter le scroll et rendre le background de la nav barre invisible -->
+      <div id="nav-sentinel" aria-hidden="true"
+      style="position:absolute;top:0;left:0;width:1px;height:1px;pointer-events:none;">
+      </div>
+      <section id="hero_Section">
+      <nav>
+        <a href="index.html"><img src="../image/comet.png" alt="Logo" /></a>
+        <a href="film.html">Film</a>
+        <a href="serie.html">Série</a>
+        <input type="search" placeholder=" search..." id="search" />
+      </nav>
+      <!-- image remplacer par le film populaire + div ou s'affichent le titre du film et les bouttons trailer et info -->
+      <img src="" alt="Top_film" id="heroImg" class="hero-img" />
+      <div id="first-film" class="hero-description"></div>
+      <button class="Play_button" id="Play_button_hero">Play</button>
+      <button class="Info_button" id="Info_button_hero">Info</button>
+      <!-- div modal pour afficher pop up contenant les information du film cliquer-->
+      <div id="hero-modal" class="hero-modal" aria-hidden="true" role="dialog" aria-labelledby="hero-modal-title"
+        aria-describedby="hero-modal-desc">
+        <div class="hero-modal__overlay" data-close="true"></div>
+        <div class="hero-modal__panel" role="document">
+          <button class="hero-modal__close" aria-label="Fermer la fenêtre">✕</button>
+          <img id="hero-modal-img" class="hero-modal__img" alt="" />
+          <div class="hero-modal__body">
+            <h2 id="hero-modal-title" class="hero-modal__title"></h2>
+            <p id="hero-modal-date" class="hero-modal__meta"></p>
+            <p id="hero-modal-desc" class="hero-modal__desc"></p>
+          </div>
+        </div>
+      </div>
+      <!-- div modal contenant la bande annonce du film cliquer-->
+      <div id="trailer-modal" class="trailer-modal" aria-hidden="true" role="dialog"
+        aria-labelledby="trailer-modal-title">
+        <div class="trailer-modal__backdrop" data-close="true"></div>
+        <div class="trailer-modal__panel" role="document">
+          <button class="trailer-modal__close" aria-label="Fermer la bande-annonce">✕</button>
+          <div class="trailer-modal__info">
+            <h2 id="trailer-modal-title" class="trailer-modal__title"></h2>
+            <p id="trailer-modal-date" class="trailer-modal__meta"></p>
+            <p id="trailer-modal-desc" class="trailer-modal__desc"></p>
+          </div>
+          <div class="trailer-modal__content"></div>
+        </div>
+      </div>
+      </section>
+      <!-- differente section ou s'affichent les film/serie récupere de l'api-->
+    <main>
+        <section>
+          <h2>Film à la une</h2>
+          <div class="films-section"></div>
+        </section>
+    </main>
+      <section>
+        <h2>Série populaire</h2>
+        <div class="TV_Show"></div>
+      </section>
+      <section>
+        <h2>À Venir</h2>
+        <div class="To_Come"></div>
+      </section>
+
+    </main>
+    <footer>
+      <p>&copy; tous droits réservés - Ben </p>
+    </footer>
+  </body>
+
+</html>

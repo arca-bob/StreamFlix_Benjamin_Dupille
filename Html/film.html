@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+    <html lang="fr">
+        <head>
+            <title>StreamFlix</title>
+            <meta charset="UTF-8"/>
+            <meta name="deeznuts"/>
+            <meta author="B"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+            <link rel="stylesheet" a href="../css/style.css"/>
+            <script defer src="../Javascript/index.js"></script>
+            <meta proprety="og:title" content="aa"/>
+        </head>
+            
+        <body>
+            <section id="hero_Section"> 
+                <nav>             
+                    <a href="index.html"><img src="../image/comet.png" alt=Logo"></a>    
+                    <a href="film.html">Film</a> 
+                    <a href="serie.html">Série</a>    
+                    <input type="search" placeholder=" search...." id="search">   
+                </nav>
+                <img src="" alt="15th movie" id="top-img" class="hero-img">
+
+                <div id="Rated_movie" class="hero-description"></div>
+                <button class="Play_button" id="Play_button_top">Play</button>
+                <button  id="Info_button_top" class="Info_button">Info</button>
+
+                <div id="hero-modal" class="hero-modal" aria-hidden="true" role="dialog" aria-labelledby="hero-modal-title" aria-describedby="hero-modal-desc">
+                    <div class="hero-modal__overlay" data-close="true"></div>
+                    <div class="hero-modal__panel" role="document">
+                        <button class="hero-modal__close" aria-label="Fermer la fenêtre">✕</button>
+                        <img id="hero-modal-img" class="hero-modal__img" alt="" />
+
+                        <div class="hero-modal__body">
+                            <h2 id="hero-modal-title" class="hero-modal__title"></h2>
+                            <p id="hero-modal-date" class="hero-modal__meta"></p>
+                            <p id="hero-modal-desc" class="hero-modal__desc"></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="trailer-modal" class="trailer-modal" aria-hidden="true" role="dialog" aria-labelledby="trailer-modal-title">
+                    <div class="trailer-modal__backdrop" data-close="true"></div>
+                    <div class="trailer-modal__panel" role="document">
+                        <button class="trailer-modal__close" aria-label="Fermer la bande-annonce">✕</button>
+                        <div class="trailer-modal__info">
+                            <h2 id="trailer-modal-title" class="trailer-modal__title"></h2>
+                            <p id="trailer-modal-date" class="trailer-modal__meta"></p>
+                            <p id="trailer-modal-desc" class="trailer-modal__desc"></p>
+                        </div>
+                    <div class="trailer-modal__content"></div>
+                    </div>
+                </div>
+            </section>
+            <main>
+                <section>
+                    <h2>Top Rated</h2>
+                    <div class="top_rated"></div>
+                </section>
+                
+            </main>
+            <footer>
+                <p>&copy; tous droits réservés - Ben </p>
+            </footer>
+        </body>
+    </html>
